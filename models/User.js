@@ -1,4 +1,4 @@
-const usersCollection = require('../db')
+const usersCollection = require('../db').db("ComplexApp").collection("users");
 const validator = require("validator")
 const bcrypt = require('bcryptjs')
 
@@ -46,7 +46,7 @@ User.prototype.login = function () {
 })
 }
 
-
+ 
 
 User.prototype.register = function () {
   // Step #1: Validate user data
